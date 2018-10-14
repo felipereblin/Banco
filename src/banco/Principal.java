@@ -5,6 +5,7 @@ import java.util.Scanner;
 import banco.modelo.Cliente;
 import banco.modelo.Conta;
 
+
 public class Principal {
 
 	public static void main(String[] args) {
@@ -23,6 +24,7 @@ public class Principal {
 
 	}
 	
+	@SuppressWarnings("unused")
 	private static void contasComFlag(ArrayList<Conta> banco) {
 		boolean continua = true;
 		

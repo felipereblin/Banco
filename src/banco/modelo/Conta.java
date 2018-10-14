@@ -1,4 +1,6 @@
 package banco.modelo;
+
+
 public class Conta {
 	private int agencia;
 	private int numero;
@@ -12,6 +14,14 @@ public class Conta {
 		this.saldo = saldo;
 	}
 
+	public double getSaldo() {
+		return saldo;
+	}
+
+	public void setSaldo(double saldo) {
+		this.saldo = saldo;
+	}
+
 	public int getAgencia() {
 		return agencia;
 	}
@@ -20,29 +30,20 @@ public class Conta {
 		return numero;
 	}
 
-	public Pessoa getCliente() {
+	public Cliente getCliente() {
 		return cliente;
-	}
-
-	public double getSaldo() {
-		return saldo;
-	}
-
-	public void setAgencia(int agencia) {
-		this.agencia = agencia;
-	}
-
-	public void setSaldo(double saldo) {
-		this.saldo = saldo;
 	}
 
 	@Override
 	public String toString() {
-		return "Agência: " + getAgencia() + "\n"
-				+ "Número Conta: " + getNumero() + "\n"
-				+ "Cliente: " + getCliente() + "\n"
-				+ "Saldo: R$" + getSaldo();
+		// TODO Auto-generated method stub
+		return "Agência: " + getAgencia()		
+			+ "\nNúmero: " + getNumero()
+			+ "\nCliente: " + getCliente()
+			+ String.format("\nSaldo: R$ %.2f", 
+					getSaldo());
 	}
+	
 	
 	
 }
